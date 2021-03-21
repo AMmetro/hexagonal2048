@@ -43,8 +43,8 @@ export const checkGamOver=(data)=>{
 
 
     const core=(x,y,q,t,z,w,f)=> {
-      if ( ( tempData[z].value !== tempData[y].value) && (tempData[w].value !== tempData[q].value) &&
-            (tempData[t].value !== tempData[x].value) && (tempData[t].value !== tempData[f].value))
+      if ( ( tempData[z].value != tempData[y].value) && (tempData[w].value != tempData[q].value) &&
+            (tempData[t].value != tempData[x].value) && (tempData[t].value != tempData[f].value))
          {return "game-over"}
       else {return "playing"}
     }
@@ -59,5 +59,17 @@ export const checkGamOver=(data)=>{
     if (res1==res2 && res3==res4 && res5==res6 && res6 && res1 !=="playing"){
         return "game-over"
     }
+
+
+
+    const checkMax=()=>{
+        for (let i=0; i<data.length; i++){
+                 if (2048==data[i].value){
+                 return "game-over"
+            }
+        }
+    }
+
+    if (checkMax()=="game-over") { return "game-over"}
 
 }

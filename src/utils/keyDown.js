@@ -39,29 +39,29 @@ export const keyDown=(event,data)=>{
 
 
     const core=(x,y,q,t,z,w,f)=> {
-        // -------------- left row sum
+        // -------------- summation left row
         if (tempData[z].value == tempData[y].value) {
             tempData[z].value = tempData[y].value * 2
             tempData[y].value = 0
         }
-        // --------------right row sum
+        // --------------summation right row
         if (tempData[w].value == tempData[q].value) {
             tempData[w].value = tempData[q].value * 2
             tempData[q].value = 0
         }
-        // --------------middle row sum
-        if (tempData[t].value == tempData[x].value) {
-            tempData[t].value = tempData[x].value * 2
-            tempData[x].value = 0
-        }
+        // --------------summation middle row
         if (tempData[f].value == tempData[t].value) {
             tempData[f].value = tempData[t].value * 2
             tempData[t].value = 0
         }
-        if (tempData[f].value == tempData[x].value) {
-            if (tempData[t].value == 0) {
-                tempData[f].value = tempData[x].value * 2
-                tempData[x].value = 0
+        else if (tempData[t].value == tempData[x].value) {
+                 tempData[t].value = tempData[x].value * 2
+                 tempData[x].value = 0
+        }
+        else  if (tempData[f].value == tempData[x].value) {
+                if (tempData[t].value == 0) {
+                    tempData[f].value = tempData[x].value * 2
+                    tempData[x].value = 0
             }
         }
         // --------------move cell in left row
@@ -96,10 +96,7 @@ export const keyDown=(event,data)=>{
                 tempData[f].value = tempData[t].value
                 tempData[t].value = 0
             }
-        }       
-        else {
-            // alert("мимо")
-         }
+        }
      }
 
            switch(event.keyCode) {
@@ -129,5 +126,4 @@ export const keyDown=(event,data)=>{
                }
                default: break;
            }
-          
        }

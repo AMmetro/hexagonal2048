@@ -4,7 +4,8 @@ import React, {useEffect, useState} from "react";
 import {keyDown} from "./utils/keyDown";
 import {APIgetData} from "./utils/API"
 import {checkGamOver} from "./utils/checkGamOver"
-import Header from "./utils/Component/Header";
+import Header from "./Component/Header";
+
 
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
         {"x": 1, "y": -1, "z": 0, "value": 0},
         {"x": 0, "y": -1, "z": 1, "value": 0}
     ]);
-    let [serverUrl, setServerUrl] = useState("//68f02c80-3bed-4e10-a747-4ff774ae905a.pub.instances.scw.cloud")
+    let [serverUrl, setServerUrl] = useState("http://localhost:13337/")
     let [status, setStatus] = useState("playing")
 
 
@@ -54,9 +55,7 @@ function App() {
       function handleKeyDown(event){
         const prevData = JSON.stringify(data)
         let playerTurn=keyDown(event,data)
-        if (prevData===JSON.stringify(playerTurn)){
-           // let over=checkGamOver(data) //!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        } else if (prevData!==JSON.stringify(playerTurn)) {
+        if (prevData!==JSON.stringify(playerTurn)){
             setData(playerTurn)
             computerTurn()
         }
@@ -65,10 +64,6 @@ function App() {
     const computerTurn=()=>{
         const filledArray=data.filter(row=> row.value!=0)
          APIgetData(serverUrl,filledArray).then((res) => {
-               // if (res.data.length==0){
-               //      setStatus("game-over")
-               //      alert("game-over")
-               //  }
              embedData(res.data)
              })
     }
@@ -90,8 +85,7 @@ function App() {
                                      data-x={cell.x} data-y={cell.y} data-z={cell.z} data-value={cell.value}
                                      style={{
                                          ...blockStyle,
-                                        //  background: cell.value === 2 || cell.value === 4 ? "green" : "red"
-                                         background: cell.value ? "green" : "red"
+                                          background: cell.value ? "green" : "red"
 
                                      }}
 
