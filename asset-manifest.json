@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/hexagonal2048/static/css/main.55e7c2fe.chunk.css",
-    "main.js": "/hexagonal2048/static/js/main.dbc2a726.chunk.js",
-    "main.js.map": "/hexagonal2048/static/js/main.dbc2a726.chunk.js.map",
+    "main.css": "/hexagonal2048/static/css/main.d42d3b50.chunk.css",
+    "main.js": "/hexagonal2048/static/js/main.6aac51de.chunk.js",
+    "main.js.map": "/hexagonal2048/static/js/main.6aac51de.chunk.js.map",
     "runtime-main.js": "/hexagonal2048/static/js/runtime-main.f5f935b8.js",
     "runtime-main.js.map": "/hexagonal2048/static/js/runtime-main.f5f935b8.js.map",
     "static/js/2.26c0221b.chunk.js": "/hexagonal2048/static/js/2.26c0221b.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.bac7549e.chunk.js": "/hexagonal2048/static/js/3.bac7549e.chunk.js",
     "static/js/3.bac7549e.chunk.js.map": "/hexagonal2048/static/js/3.bac7549e.chunk.js.map",
     "index.html": "/hexagonal2048/index.html",
-    "static/css/main.55e7c2fe.chunk.css.map": "/hexagonal2048/static/css/main.55e7c2fe.chunk.css.map",
+    "static/css/main.d42d3b50.chunk.css.map": "/hexagonal2048/static/css/main.d42d3b50.chunk.css.map",
     "static/js/2.26c0221b.chunk.js.LICENSE.txt": "/hexagonal2048/static/js/2.26c0221b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.f5f935b8.js",
     "static/js/2.26c0221b.chunk.js",
-    "static/css/main.55e7c2fe.chunk.css",
-    "static/js/main.dbc2a726.chunk.js"
+    "static/css/main.d42d3b50.chunk.css",
+    "static/js/main.6aac51de.chunk.js"
   ]
 }
